@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css?family=Croissant+One|Raleway:400,700');
+
+body {
+	font-size: 16px;
+	background-color: #26435a;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 500;
+	color: #26435a;
+	margin: 0;
+	padding: 25px;
+}
+
+h1 {
+	font-size: 1rem;
+	line-height: .87;
+	text-align: center;
+	text-transform: uppercase;
+	margin: 0;
+	color: #fff;
+}
+
+h1 span {
+	display: block;	
+	font-size: 3rem;
+	text-transform: capitalize;
+	color: #fff;
+}
+
+.gallery {
+	padding: 0 0 5px 0;
+	max-width: 650px;
+	margin: 30px auto 0 auto;
+	background-color: #fff;
+}
+
+.gallery main {
+	display: block; 
+	position: relative;
+	overflow: hidden;
+	padding-bottom: calc(60% + 2.5rem);
+}
+
+.gallery main figure {
+	display: block; 
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+    opacity: 0;
+    left: 100%;
+    transition: opacity 1s, left 1s;
+}
+
+.gallery main img {
+	width: 100%;
+}
+
+.gallery main figcaption {
+	display: block;
+	text-align: center;
+	line-height: 1;
+	background-color: #fff;
+	padding-top: 10px;
+}
+
+.gallery nav {
+	display: flex;
+	margin: 20px 10px 10px 10px;
+	padding: 0;
+}
+
+.gallery nav label {
+	cursor: pointer;
+}
+
+.gallery nav img {
+	display: block;
+	width: calc(100% - 10px);
+	border: 5px solid #fff;
+}
+
+.gallery nav img:hover {
+	border-color: #f6e1af;
+}
+
+.gallery nav label{
+    width: 33.33%;
+}
+
+
+.gallery input{
+    display: none;
+}
+
+.gallery input:nth-of-type(1):checked ~ main figure:nth-of-type(1),
+.gallery input:nth-of-type(2):checked ~ main figure:nth-of-type(2),
+.gallery input:nth-of-type(3):checked ~ main figure:nth-of-type(3){
+
+    opacity: 1;
+    left: 0;
+
+}
+
+.gallery input:nth-of-type(1):checked ~ nav label:nth-of-type(1) img,
+.gallery input:nth-of-type(2):checked ~ nav label:nth-of-type(2) img,
+.gallery input:nth-of-type(3):checked ~ nav label:nth-of-type(3) img{
+
+    border-color: #26435a;
+
+}
+
